@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿// Написать программу,
 // которая из имеющегося массива строк
 // формирует новый массив из строк, 
@@ -35,21 +34,21 @@ string[] CreateNewArrayFromThreeCharString(string[] array)
     string s = string.Empty;
     int count = 0;
     string[] resultArray=new string[count];
-    string[] newArray = new string[array.Length];
+    string[] tempArray = new string[array.Length];
     for (int i = 0; i < array.Length; i++)
         {
             s = array[i];
             if(s.Length<=3)
             { 
                 // Console.WriteLine("count"+ count+"= "+ s);
-                newArray[count] = s;
+                tempArray[count] = s;
                 count++;
                 resultArray = new string[count];
             }      
         }
     for (int j = 0; j < count; j++)
     {
-        resultArray[j]=newArray[j];
+        resultArray[j]=tempArray[j];
     }
     return resultArray;
 }
